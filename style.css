@@ -1,0 +1,141 @@
+*{
+	margin: 0%;
+	padding: 0%;
+	box-sizing: border-box;
+}
+
+body{
+	width: 100%;
+	min-height: 100vh;
+	height: max-content;
+	background-image: linear-gradient( rgb(183, 0, 255), rgb(76, 0, 255));
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	padding-top: 40px;
+	justify-content: start;
+	align-items: center;
+}
+
+.forma{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.myworks{
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 70%;
+	margin-top: 15px;
+}
+
+.formm{
+	width: 70%;
+	border-radius: 20px;
+	padding: 25px 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+	background-color: white;
+}
+
+.inpute{
+	position: relative;
+}
+
+#inputes{
+	background: none;
+	border: 2px solid rgb(183, 0, 255);
+	color: black;
+	padding: 10px;
+	font-size: 18px;
+	position: relative;
+	z-index: 2;
+	border-radius: 10px;
+}
+
+#inputes~span{
+	top: 0;
+	left: 0%;
+	position: absolute;
+	padding: 10px;
+	font-size: 18px;
+	transition: all 0.4s ease;
+	user-select: none;
+	z-index: 1;
+	color: gray;
+}
+
+.btns{
+	background-color: rgb(183, 0, 255);
+	border: none;
+	font-size: 15px;
+	color: white;
+	border-radius: 10px;
+	font-weight: 600;
+	user-select: none;
+}
+
+#btn{
+	padding: 10px 6px;
+}
+
+.btns:hover{
+	filter: brightness(120%);
+}
+
+.btns:active{
+	filter: brightness(90%);
+}
+
+#inputes:focus{
+		outline: none;
+}
+
+#inputes:focus~span,
+#inputes:valid~span{
+	font-size: 15px;
+	transform: translate(20%, -50%);
+	background-color: white;
+	border: 2px solid rgb(183, 0, 255);
+	padding: 0 2px;
+	z-index: 3;
+	border-radius: 6px;
+	color: rgb(183, 0, 255);
+}
+
+.work{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 15px;
+	background-color: white;
+	border-radius: 20px;
+	padding: 10px;
+}
+
+.work>.btns{
+	width: 35px;
+	height: 35px;
+	padding: 2px;
+}
+
+.work>p{
+	font-size: 18px;
+}
+
+@media (max-width: 550px) {
+	.formm{
+		flex-direction: column;
+	}
+	.inpute{
+		width: 80%;
+	}
+	#inputes{
+		max-width: 100%;
+	}
+}
